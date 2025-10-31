@@ -1,0 +1,59 @@
+/* Estilos personalizados para o Dashboard de Clima */
+
+/* Suavizar as transições */
+* {
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Melhorar a aparência dos cards */
+.bg-blue-50 {
+    transition: all 0.3s ease;
+}
+
+.bg-blue-50:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Estilo para o input de busca */
+input:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Aplicar animação aos cards */
+#resultado > div {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Melhorar a responsividade */
+@media (max-width: 640px) {
+    .grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    #resultado > div {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Estilo para o botão de busca */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Melhorar a legibilidade */
+body {
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* Efeito de hover nos cards de informação */
+.bg-blue-50:hover {
+    background-color: #eff6ff;
+}
